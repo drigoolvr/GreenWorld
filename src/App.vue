@@ -62,6 +62,8 @@ export default {
 
 	#app {
 		width: 100%;
+        max-width: 1500px;
+        margin: auto;
 		height: fit-content;
         background-image: url('./assets/images/white-pattern-bg.jpg');
         background-size: 100% 100%;
