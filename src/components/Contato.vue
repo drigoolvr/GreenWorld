@@ -123,4 +123,37 @@ export default {
         color: var(--palleteWhite);
         text-shadow: 1px 1px 0px var(--palleteBlack);
     }
+
+    @media (max-width: 450px) {
+		.contato img {
+			display: none;
+		}
+
+        .form-area {
+            width: 100%;
+        }
+
+        .formulario {
+            width: 100%;
+        }
+
+        .form-area-1,
+        .form-area-2 {
+            flex-direction: column;
+        }
+
+        .form-area-1 input,
+        .form-area-2 input {
+            width: 100%;
+        }
+
+        .form-area-1 input:first-child,
+        .form-area-2 input:first-child {
+            margin-bottom: 18px;
+        }
+
+        .form-area p {
+            text-align: center;
+        }
+	}
 </style>

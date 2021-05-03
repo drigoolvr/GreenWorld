@@ -126,4 +126,22 @@ export default {
     .energy-type figcaption {
         text-align: center;
     }
+
+    @media (max-width: 450px) {
+		.energia-left {
+			width: 100%;
+		}
+
+		.energia-right {
+			display: none;
+		}
+
+        .energy-list {
+            justify-content: center;
+        }
+
+        .energy-type {
+            width: 100%;
+        }	
+	}
 </style>

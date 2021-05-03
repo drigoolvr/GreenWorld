@@ -90,4 +90,18 @@ export default {
 		height: 450px;
 		
 	}
+
+	@media (max-width: 450px) {
+		.about-left {
+			width: 100%;
+		}
+
+		.about-right {
+			display: none;
+		}	
+
+		.about-left h2 {
+			font-size: 45px;
+		}
+	}
 </style>

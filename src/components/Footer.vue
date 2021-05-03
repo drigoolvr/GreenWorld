@@ -2,7 +2,7 @@
     <footer>
         <div class = "footer-top">
             <div class = "footer-logo">
-                <h2>Green<span>World</span></h2>
+                <h2>APS <span>Sustentabilidade</span></h2>
                 <img src = "../assets/images/planetlogo.svg"/>
             </div>
             
@@ -19,7 +19,7 @@
         </div>
         <hr style="height:1px;border-width:0;color:#EEE;background-color:#EEE">
         <div class = "footer-bottom">
-            <p>GreenWorld @2021</p>        
+            <p>Atividades supervisionadas UNIP @2021</p>        
         </div>
     </footer>
 </template>
@@ -125,5 +125,34 @@ export default {
         color: var(--palleteWhite);
         font-size: 20px;
         text-shadow: 1px 1px 0px black;
+    }
+
+    @media (max-width: 450px) {
+        .footer-top {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 150px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .footer-logo {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .footer-logo h2 {
+            font-size: 30px;
+        }
+
+        .sign-up {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .footer-bottom {
+            height: 90px;
+        }
     }
 </style>

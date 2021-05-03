@@ -37,8 +37,8 @@
         <br><br>
         <img src = "../../assets/images/energia/eolica/turbinas.jpg" alt = "Turbinas"/>
         <br><br>
-
         <button class = "backButton" @click = "HomeReturn('#id-energia')">Voltar</button>
+        <br><br>
     </div>    
 </template>
 
@@ -126,4 +126,19 @@ export default {
         color: var(--palleteWhite);
         text-shadow: 1px 1px 0px var(--palleteBlack);
     }  
+
+    @media (max-width: 450px) {
+        .container {
+            width:100%;
+            padding: 10px;
+        }
+
+        img {
+            width: 90%;
+        }
+
+        ul {
+            width: 90%;
+        }
+    }
 </style>

@@ -81,4 +81,14 @@ export default {
     .sustentabilidade-right ul {
         margin-left: 20px;
     }
+
+    @media (max-width: 450px) {
+		.sustentabilidade-left {
+			display: none;
+		}
+
+		.sustentabilidade-right {
+			width: 100%;
+		}	
+	}
 </style>
