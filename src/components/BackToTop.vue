@@ -69,4 +69,10 @@ export default {
         z-index: 150;
         text-shadow: 2px 2px 0px var(--palleteBlack);
     }
+
+    @media (min-width: 1500px) {
+        .back-to-top {
+            right: calc((100vw - 1500px) / 2 + 20px);
+        }
+    }
 </style>
