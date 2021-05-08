@@ -1,27 +1,29 @@
 <template>
-    <div id = "id-contato" class = "contato">
-        <img src = "../assets/images/home/contactimg.svg" />
-        <div class = "form-area">
-            <h2>CONTATO</h2>
-            <br>
-            <p>Resta alguma dúvida? Entre em contato através do formulário abaixo.</p>
-            <br><br>
-            <div class = "formulario">
-                <div class = "form-area-1">
-                    <input type = "text" placeholder = "Nome Completo" name = "nome" maxlength="50" />
-                    <input type = "email" placeholder = "Email" name = "email" maxlength="50"/>
+    <div class = "container">
+        <div id = "id-contato" class = "contato">
+            <img src = "../assets/images/home/contactimg.svg" />
+            <div class = "form-area">
+                <h2>CONTATO</h2>
+                <br>
+                <p>Resta alguma dúvida? Entre em contato através do formulário abaixo.</p>
+                <br><br>
+                <div class = "formulario">
+                    <div class = "form-area-1">
+                        <input type = "text" placeholder = "Nome Completo" name = "nome" maxlength="50" />
+                        <input type = "email" placeholder = "Email" name = "email" maxlength="50"/>
+                    </div>
+                    <br>
+                    <div class = "form-area-2">
+                        <input type = "tel" placeholder = "Telefone" name = "phone" maxlength="20" />
+                        <input type = "text" placeholder = "Assunto" name = "assunto" maxlength="50" />
+                    </div>
+                    <br>
+                    <textarea name = "message" rows = "5" placeholder = "Mensagem" maxlength="500"></textarea>
+                    <br>
+                    <input class = "submit-button" type = "submit" @click = "SendMessage()"/>      
                 </div>
-                <br>
-                <div class = "form-area-2">
-                    <input type = "tel" placeholder = "Telefone" name = "phone" maxlength="20" />
-                    <input type = "text" placeholder = "Assunto" name = "assunto" maxlength="50" />
-                </div>
-                <br>
-                <textarea name = "message" rows = "5" placeholder = "Mensagem" maxlength="500"></textarea>
-                <br>
-                <input class = "submit-button" type = "submit" @click = "SendMessage()"/>      
-            </div>
-        </div>        
+            </div>        
+        </div>
     </div>
 </template>
 
@@ -33,17 +35,24 @@ export default {
     },
     methods: {
         SendMessage: function() {
-            alert("Formulário funcionando!");
+            alert("Formulário inserido apenas para fins estéticos!");
         }
     }
 }
 </script>
 
 <style scoped>
+    .container {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1); 
+        display: flex;
+        justify-content: center;
+    }
+    
     .contato {
         width: 100%;
-        padding: 40px 20px;
-        background-color: rgba(0, 0, 0, 0.1);  
+        max-width: 1500px;
+        padding: 40px 20px;         
         display: flex;  
         justify-content: space-between;    
     }
@@ -156,4 +165,25 @@ export default {
             text-align: center;
         }
 	}
+
+    @media (min-width: 450px) and (max-width: 800px) {
+       .contato img {
+			display: none;
+		}
+
+        .form-area {
+            width: 100%;
+        }
+
+        .formulario {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 800px) and (max-width: 1100px) {
+        .contato img {
+            width: 350px;
+            height: 350px;
+        }
+    }
 </style>

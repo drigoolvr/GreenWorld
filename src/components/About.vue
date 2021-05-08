@@ -1,14 +1,16 @@
 <template>
-    <div id = "id-about" class = "about">
-        <div class = "about-left">
-            <h2><span>Conscientização</span> para um planeta ecologicamente <span>sustentável</span></h2>
-			<br><br>
-            <p><i class="fas fa-quote-left green-quote-left"></i>Estou dizendo para vocês que há esperança, eu tenho visto isso. Mas ela não vem dos governos e corporações, ela vem das pessoas.<i class="fas fa-quote-right green-quote-right"></i><br><span>Greta Thunberg</span></p>				
-        </div>
-		<aside class = "about-right">
-			<img src = "../assets/images/home/aboutimg.svg"/>			
-		</aside>        
-    </div>
+	<div class = "container">
+		<div id = "id-about" class = "about">
+			<div class = "about-left">
+				<h2><span>Conscientização</span> para um planeta ecologicamente <span>sustentável</span></h2>
+				<br><br>
+				<p><i class="fas fa-quote-left green-quote-left"></i>Estou dizendo para vocês que há esperança, eu tenho visto isso. Mas ela não vem dos governos e corporações, ela vem das pessoas.<i class="fas fa-quote-right green-quote-right"></i><br><span>Greta Thunberg</span></p>				
+			</div>
+			<aside class = "about-right">
+				<img src = "../assets/images/home/aboutimg.svg"/>			
+			</aside>        
+		</div>
+	</div>    
 </template>
 
 <script>
@@ -22,10 +24,17 @@ export default {
 </script>
 
 <style scoped>
+	.container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
     .about {
 		display: flex;
 		justify-content: space-between;
 		padding: 0px 20px;
+		max-width: 1500px;
 	}
 
 	.about-left {
@@ -87,11 +96,10 @@ export default {
 
 	.about-right img {
 		width: 450px;
-		height: 450px;
-		
+		height: 450px;		
 	}
 
-	@media (max-width: 450px) {
+	@media (max-width: 800px) {
 		.about-left {
 			width: 100%;
 		}
@@ -104,4 +112,17 @@ export default {
 			font-size: 45px;
 		}
 	}
+
+	@media (min-width: 800px) and (max-width: 1100px) {
+		.about-left h2 {
+			font-size: 50px;
+		}
+
+		.about-right img {
+			width: 350px;
+			height: 350px;
+		}
+	}
+
+	
 </style>

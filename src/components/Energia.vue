@@ -1,23 +1,25 @@
 <template>
-    <div id = "id-energia" class = "energia">
-        <div class = "energia-left">
-            <h2>Energia Sustentável</h2>
-            <br>
-            <p>Energia sustentável é toda a energia gerada através de fontes renováveis que se reciclam naturalmente dentro de uma escala de tempo humana, sem grandes impactos ao meio ambiente.</p>
-            <br>
-            <p>Existem muitas fontes de energia sustentável utilizadas hoje no mundo. Além disso, há também muita controvérsia se determinadas fontes de energia são ou não sustentáveis, como é o caso da energia nuclear. Podemos listar 6 principais tipos de energias limpas que mais crescem atualmente:
-            </p>
-            <br><br>
-            <div class = "energy-list">
-                <figure class = "energy-type" v-for = "(energia, index) in energia" v-bind:key = "index" @click = "openEnergy(index)">
-                    <img v-bind:src = "getImgUrl(index)" v-bind:alt = "energia.name" />         
-                    <figcaption>{{energia.name}}</figcaption>                                                  
-                </figure>
+    <div class = "container">  
+        <div id = "id-energia" class = "energia">
+            <div class = "energia-left">
+                <h2>Energia Sustentável</h2>
+                <br>
+                <p>Energia sustentável é toda a energia gerada através de fontes renováveis que se reciclam naturalmente dentro de uma escala de tempo humana, sem grandes impactos ao meio ambiente.</p>
+                <br>
+                <p>Existem muitas fontes de energia sustentável utilizadas hoje no mundo. Além disso, há também muita controvérsia se determinadas fontes de energia são ou não sustentáveis, como é o caso da energia nuclear. Podemos listar 6 principais tipos de energias limpas que mais crescem atualmente:
+                </p>
+                <br><br>
+                <div class = "energy-list">
+                    <figure class = "energy-type" v-for = "(energia, index) in energia" v-bind:key = "index" @click = "openEnergy(index)">
+                        <img v-bind:src = "getImgUrl(index)" v-bind:alt = "energia.name" />         
+                        <figcaption>{{energia.name}}</figcaption>                                                  
+                    </figure>
+                </div>
             </div>
-        </div>
 
-        <div class = "energia-right">
-             <img src = "../assets/images/home/energiaimg.svg" />
+            <div class = "energia-right">
+                <img src = "../assets/images/home/energiaimg.svg" />
+            </div>
         </div>
     </div>
 </template>
@@ -53,10 +55,17 @@ export default {
 </script>
 
 <style scoped>
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+    }
+    
     .energia {
         width: 100%;
         padding: 40px 20px;
         display: flex;
+        max-width: 1500px;
     }
 
     .energia-left {
@@ -128,7 +137,7 @@ export default {
     }
 
     @media (max-width: 450px) {
-		.energia-left {
+        .energia-left {
 			width: 100%;
 		}
 
@@ -141,7 +150,33 @@ export default {
         }
 
         .energy-type {
-            width: 100%;
+            width: 90vw;
+            height: 45vw;
+        }	
+    }
+
+    @media (min-width: 450px) and (max-width: 800px) {
+		.energia-left {
+			width: 100%;
+		}
+
+		.energia-right {
+			display: none;
+		}
+
+        .energy-list {
+            justify-content: space-evenly;
+        }
+
+        .energy-type {
+            width: 40vw;
+            height: 20vw;
         }	
 	}
+
+    @media (min-width: 800px) and (max-width: 1100px) {
+        .energy-type {
+            height: 150px;
+        }	
+    }
 </style>

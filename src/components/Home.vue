@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class = "container">
         <About />
         <Sustentabilidade />
         <Energia />
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style scoped>
-    
+    .container {
+        width: 100%;
+    }
 </style>

@@ -82,6 +82,7 @@ export default {
 <style scoped>
     .container {
         width: 70%;
+        max-width: 1000px;
         padding: 20px 50px;
         display: flex;
         flex-direction: column;
@@ -170,6 +171,13 @@ export default {
         .central-geotermica,
         .bomba-de-calor {
             height: 300px;
+        }
+    }
+
+    @media (min-width: 450px) and (max-width: 800px) {
+        .container {
+            width: 90%;
+            padding: 10px;
         }
     }
 </style>

@@ -60,8 +60,14 @@ export default {
     
     },
     methods: {
-        openMenu: function() {            
-            document.querySelector(".menu-mobile").style.left = "40%";            
+        openMenu: function() {
+            if(window.innerWidth <= 450) {
+                document.querySelector(".menu-mobile").style.left = "40%"; 
+            }   
+            else {
+                document.querySelector(".menu-mobile").style.left = "60%"; 
+            }        
+                       
         },
         closeMenu: function() {
             document.querySelector(".menu-mobile").style.left = "100%";
@@ -87,8 +93,7 @@ export default {
                 }                    
             } else {
                 this.$emit('btnReturn', id);
-            }                       
-                         
+            }                              
         }     
     }
 }
@@ -100,6 +105,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 1500px;
         font-family: 'Bebas Neue';
         padding: 20px;
     }
@@ -118,7 +124,7 @@ export default {
     .header-left h1 {
         color: var(--palleteGreen);
         font-size: 40px;
-        text-shadow: 2px 2px 0px var(--palleteBlack);
+        text-shadow: 1px 1px 0px var(--palleteBlack);
     }
 
     .header-left span {
@@ -233,23 +239,23 @@ export default {
         display: flex;
         justify-content: center;  
         background-color: var(--palleteGreen);  
-        padding: 20px 0px; 
-        border-left: 1px solid var(--palleteBlack);   
+        padding: 5px 0px; 
+        border-left: 1px solid var(--palleteWhite);   
         z-index: 150;    
     }
 
     .menu-mobile > ul {
         list-style-type: none;
         width: 100%;
-        padding: 10px 0px;                
+        padding: 5px 0px;                
     }
 
     .menu-mobile > ul > li {
         text-align: center;
         color: var(--palleteWhite);
-        font-size: 25px;
+        font-size: 22px;
         list-style-type: none;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         transition: all 0.5s ease;
         cursor: pointer;
         text-shadow: 0px 0px 10px var(--palleteBlack);
@@ -266,20 +272,26 @@ export default {
     }
 
     .menu-energia-mobile li {
-        font-size: 22px;
+        font-size: 18px;
         color: var(--palleteWhite);
         line-height: 30px;
         list-style-type: none;
     }
 
-    @media (max-width:450px) {
+    @media (min-width: 450px) and (max-width: 800px) {
+        .menu-mobile {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 800px) {
         .header-left h1 {            
-            font-size: 30px;
+            font-size: 25px;
         }
 
         .header-left img {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             margin-left: 10px;
         }
         
@@ -293,6 +305,20 @@ export default {
 
         #menu-toggle-button:hover {
             color: var(--palleteBlue);
+        }
+
+        
+    }
+
+    @media (min-width: 800px) and (max-width: 1100px) {
+        .header-left h1 {            
+            font-size: 35px;
+        }
+
+        .header-left img {
+            width: 35px;
+            height: 35px;
+            margin-left: 10px;
         }
     }
 </style>

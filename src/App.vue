@@ -61,12 +61,13 @@ export default {
 @import 'assets/css/style.css';
 
 	#app {
-		width: 100%;
-        max-width: 1500px;
+		width: 100%;        
         margin: auto;
 		height: fit-content;
-        background-image: url('./assets/images/white-pattern-bg.jpg');
-        background-size: 100% 100%;
+        background-color: #DDD;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 	}
 
     .fade-enter-active,
